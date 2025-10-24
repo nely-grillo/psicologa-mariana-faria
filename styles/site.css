@@ -1,0 +1,146 @@
+/* site.css
+   Extracted styles from index.html
+   - color variables, utility overrides
+   - mandala texture, CTA pulse animation
+   - carousel styles
+   - back-to-top styles
+*/
+
+/* Configuração de cores personalizadas baseadas na logo azul (Mandala Floral) */
+:root {
+    /* Azul principal da marca (semelhante ao blue-800) */
+    --color-brand: #1e40af; 
+    /* Azul vibrante para CTAs e destaques (semelhante ao blue-600) */
+    --color-primary-action: #2563eb; 
+    /* Azul claríssimo para fundos de seção (semelhante ao blue-50) */
+    --color-background-soft: #f7f7f7; /* Cinza/off-white sutil para fundos */
+}
+        
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff; /* Fundo principal claro */
+}
+.hero-bg {
+    background-color: var(--color-background-soft);
+}
+.bg-brand { background-color: var(--color-brand); }
+.text-brand { color: var(--color-brand); }
+.bg-primary-action { background-color: var(--color-primary-action); }
+.hover\:bg-primary-action-dark:hover { background-color: #1e40af; } /* blue-800 hover */
+
+.shadow-soft {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08); /* Sombra mais sutil */
+}
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.12);
+}
+
+/* Efeito de Logo/Mandala no Fundo */
+.mandala-texture {
+    /* ATENÇÃO: SUBSTITUA A URL ABAIXO PELA URL DIRETA DA IMAGEM DA LOGO/MANDALA */
+    background-image: url('/images/logo.png'); 
+    background-repeat: repeat;
+    background-size: 300px;
+    opacity: 0.1; /* Super sutil */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Animação de pulso para CTA */
+@keyframes pulse-scale {
+    0%   { transform: scale(1); box-shadow: 0 20px 40px -20px rgba(37,99,235,0.35); }
+    50%  { transform: scale(1.04); box-shadow: 0 28px 50px -20px rgba(37,99,235,0.45); }
+    100% { transform: scale(1); box-shadow: 0 20px 40px -20px rgba(37,99,235,0.35); }
+}
+.pulse-btn {
+    animation: pulse-scale 2s infinite;
+    will-change: transform;
+}
+
+/* === Estilos do Carrossel (highlights) === */
+#highlights-container {
+    gap: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    align-items: stretch;
+}
+/* cada item deve ter largura fixa para deslizar de forma previsível; responsivo abaixo */
+.carousel-item {
+    flex: 0 0 100%; /* mobile: 1 item por vez */
+    box-sizing: border-box;
+    padding: 0 0.5rem; /* pequeno espaçamento lateral */
+    scroll-snap-align: start;
+}
+@media (min-width: 768px) {
+    .carousel-item { flex: 0 0 calc(50% - 1rem); } /* tablet: 2 colunas */
+}
+@media (min-width: 1024px) {
+    .carousel-item { flex: 0 0 calc(33.333% - 1rem); } /* desktop: 3 colunas */
+}
+/* remove barra de rolagem visual em webkit (apenas estética) */
+#highlights-container::-webkit-scrollbar { display: none; }
+/* dots */
+#highlights-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: rgba(255,255,255,0.25);
+    border: none;
+    padding: 0;
+}
+#highlights-dots button.active { background: var(--color-primary-action); }
+
+/* Prev/Next buttons */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 20;
+}
+.carousel-nav button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(17,24,39,0.75);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.carousel-prev { left: 0.5rem; }
+.carousel-next { right: 0.5rem; }
+
+/* Estilos para o botão Voltar ao Topo */
+.back-to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1.25rem;
+    width: 48px;
+    height: 48px;
+    background: var(--color-primary-action);
+    color: white;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(37,99,235,0.25);
+    z-index: 60;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+.back-to-top[aria-hidden="false"] { opacity: 1; transform: translateY(0); }
+.back-to-top:focus { outline: 2px solid rgba(255,255,255,0.85); outline-offset: 3px; }
+.back-to-top svg { width: 20px; height: 20px; }
+@media (prefers-reduced-motion: reduce) {
+    .back-to-top { transition: none; }
+}

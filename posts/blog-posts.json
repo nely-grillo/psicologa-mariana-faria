@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Ansiedade",
+    "date": "2025-10-03",
+    "excerpt": "Lidar com a ansiedade é reorganizar emoções e pensamentos para recuperar equilíbrio. A terapia é um espaço seguro para reconstruir essa relação consigo mesma e promover autoconhecimento.",
+    "image": "/images/ansiedade.jpeg",
+    "link": "/posts/ansiedade.html"
+  },
+  {
+    "title": "O impacto do estresse no dia a dia",
+    "date": "2025-07-15",
+    "excerpt": "A correria da rotina, a pressão constante e a sobrecarga de responsabilidades podem desgastar tanto a mente quanto o corpo. A terapia oferece um espaço para compreender esses processos e encontrar caminhos mais saudáveis de lidar com as dificuldades.",
+    "image": "/images/estresse.jpeg",
+    "link": "/posts/estresse.html"
+  },
+  {
+    "title": "Ansioso já neste início de ano? Aprenda a lidar com planos e desafios visando o bem-estar",
+    "date": "2024-01-11",
+    "excerpt": "Com o novo ano, aumentam expectativas e preocupações. A psicóloga Mariana Faria sugere ajustar expectativas, organizar planos realistas, praticar autocuidado e buscar ajuda quando necessário para preservar a saúde mental. (Fonte: Portal Multiplix)",
+    "image": "/images/mulher_preta_estresse2.jpeg",
+    "link": "https://www.portalmultiplix.com/noticias/saude-bem-estar/ansioso-ja-neste-inicio-de-ano-aprenda-a-lidar-com-os-novos-planos-e-desafios-visando-o-bem-estar"
+  },
+  {
+    "title": "Uso excessivo de celular pode causar insônia, dores e outros problemas de saúde",
+    "date": "2022-03-14",
+    "excerpt": "Pesquisa mostra que o Brasil está entre os países que mais usam celular; o uso excessivo pode provocar insônia, dores de cabeça e impacto na saúde mental. Dicas práticas: estabelecer limites, fazer pausas e reduzir o uso antes de dormir. (Fonte: Portal Multiplix)",
+    "image": "/images/people.png",
+    "link": "https://www.portalmultiplix.com/noticias/cotidiano/uso-excessivo-de-celular-pode-causar-insonia-dores-e-outros-problemas-de-saude"
+  }
+]
