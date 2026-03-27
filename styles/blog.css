@@ -1,0 +1,274 @@
+/* ===========================
+   BLOG - Seção de Artigos
+   =========================== */
+
+/* Seção principal do blog */
+.blog {
+  padding-top: 4rem;         /* py-16 */
+  padding-bottom: 4rem;
+  background-color: #F9FAFB; /* bg-gray-50 */
+}
+@media (min-width: 768px) {
+  .blog {
+    padding-top: 6rem;       /* md:py-24 */
+    padding-bottom: 6rem;
+  }
+}
+
+/* Container do blog */
+.blog__container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .blog__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .blog__container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Título principal */
+.blog__titulo {
+  font-size: 1.875rem;       /* text-3xl */
+  font-weight: 800;          /* font-extrabold */
+  color: #111827;            /* text-gray-900 */
+  text-align: center;
+  margin-bottom: 1rem;       /* mb-4 */
+}
+
+/* Subtítulo/descrição */
+.blog__descricao {
+  font-size: 1.25rem;        /* text-xl */
+  color: #4B5563;            /* text-gray-600 */
+  text-align: center;
+  max-width: 48rem;          /* max-w-3xl */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;       /* mb-12 */
+}
+
+/* Grade de posts */
+.blog__grade {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);  /* grid-cols-1 */
+  gap: 2rem;                              /* gap-8 */
+}
+@media (min-width: 768px) {
+  .blog__grade {
+    grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+  }
+}
+@media (min-width: 1024px) {
+  .blog__grade {
+    grid-template-columns: repeat(3, 1fr); /* lg:grid-cols-3 */
+  }
+}
+
+/* Card do post individual */
+.blog__post {
+  display: block;
+  background-color: #ffffff;    /* bg-white */
+  border-radius: 0.5rem;        /* rounded-lg */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);  /* shadow-sm */
+  overflow: hidden;
+  transition: box-shadow 200ms ease;
+  text-decoration: none;
+}
+.blog__post:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* hover:shadow-md */
+}
+
+/* Imagem do post */
+.blog__post-imagem {
+  width: 100%;              /* w-full */
+  height: 10rem;            /* h-40 */
+  object-fit: cover;        /* object-cover */
+  display: block;
+}
+
+/* Corpo do card */
+.blog__post-corpo {
+  padding: 1rem;            /* p-4 */
+}
+
+/* Título do post */
+.blog__post-titulo {
+  font-weight: 600;         /* font-semibold */
+  color: #1f2937;           /* text-gray-800 */
+  margin-bottom: 0.5rem;    /* mb-2 */
+  font-size: 1.125rem;
+}
+
+/* Resumo/excerpt do post */
+.blog__post-resumo {
+  font-size: 0.875rem;      /* text-sm */
+  color: #4B5563;           /* text-gray-600 */
+  margin-bottom: 0.75rem;   /* mb-3 */
+  line-height: 1.5;
+}
+
+/* Meta informações (data, leia mais) */
+.blog__post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;       /* text-xs */
+  color: #6B7280;           /* text-gray-500 */
+}
+
+/* Link "Leia mais" */
+.blog__post-leia-mais {
+  color: #3b82f6;           /* text-blue-500 */
+  font-weight: 500;         /* font-medium */
+}
+
+/* Container do botão "Ver todos" */
+.blog__acoes {
+  text-align: center;
+  margin-top: 3rem;         /* mt-12 */
+}
+
+/* Botão "Ver todos os artigos" */
+.blog__botao-ver-todos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;  /* px-6 py-3 */
+  border: 1px solid transparent;
+  font-size: 1rem;          /* text-base */
+  font-weight: 500;         /* font-medium */
+  border-radius: 0.5rem;    /* rounded-lg */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  color: #ffffff;
+  background-color: #2563eb; /* bg-blue-600 */
+  transition: background-color 300ms ease;
+  text-decoration: none;
+}
+.blog__botao-ver-todos:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+/* Mensagem de erro/carregamento */
+.blog__mensagem {
+  text-align: center;
+  color: #6B7280;           /* text-gray-500 */
+  padding: 2rem 0;
+}
+
+/* ===========================
+   ENTREVISTA - Seção YouTube
+   =========================== */
+
+/* Seção da entrevista */
+.entrevista {
+  padding-top: 4rem;        /* py-16 */
+  padding-bottom: 4rem;
+  background-color: #ffffff; /* bg-white */
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .entrevista {
+    padding-top: 6rem;      /* md:py-24 */
+    padding-bottom: 6rem;
+  }
+}
+
+/* Container da entrevista */
+.entrevista__container {
+  max-width: 56rem;         /* max-w-4xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+@media (min-width: 640px) {
+  .entrevista__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .entrevista__container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Título da entrevista */
+.entrevista__titulo {
+  font-size: 1.875rem;      /* text-3xl */
+  font-weight: 700;         /* font-bold */
+  text-align: center;
+  color: #111827;           /* text-gray-900 */
+  margin-bottom: 1rem;      /* mb-4 */
+}
+
+/* Descrição da entrevista */
+.entrevista__descricao {
+  text-align: center;
+  color: #4B5563;           /* text-gray-600 */
+  margin-bottom: 2rem;      /* mb-8 */
+}
+
+/* Wrapper do vídeo */
+.entrevista__video-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;      /* rounded-2xl */
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.06); /* shadow-soft */
+  max-width: 900px;
+}
+
+/* Container responsivo 16:9 */
+.entrevista__video-container {
+  position: relative;
+  padding-bottom: 56.25%;   /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+/* iframe do vídeo */
+.entrevista__video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Container de ações (botões) */
+.entrevista__acoes {
+  text-align: center;
+  margin-top: 2rem;         /* mt-8 */
+}
+
+/* Botão de agendar */
+.entrevista__botao-agendar {
+  display: inline-block;
+  padding: 1rem 2rem;       /* px-8 py-4 */
+  background-color: #2563eb; /* bg-primary-action */
+  color: #ffffff;
+  font-size: 1.125rem;      /* text-lg */
+  font-weight: 600;         /* font-semibold */
+  border-radius: 0.75rem;   /* rounded-xl */
+  transition: background-color 300ms ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-decoration: none;
+}
+.entrevista__botao-agendar:hover {
+  background-color: #1d4ed8; /* hover:bg-primary-action-dark */
+}

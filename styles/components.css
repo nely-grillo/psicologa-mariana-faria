@@ -1,0 +1,45 @@
+/* ===========================
+   COMPONENTES GLOBAIS
+   =========================== */
+
+/* Botão "Voltar ao Topo" */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--brand);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: background-color 300ms ease, transform 300ms ease, opacity 300ms ease;
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--brand-dark);
+  transform: translateY(-4px);
+}
+
+.back-to-top:active {
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   FIM COMPONENTES
+   =========================== */

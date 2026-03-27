@@ -1,0 +1,26 @@
+/* ===========================
+   ARQUIVO PRINCIPAL DE ESTILOS
+   Importa todos os módulos CSS
+   =========================== */
+
+/* Estilos globais e variáveis */
+@import url("global.css");
+
+/* Componentes globais (header, footer, etc) */
+@import url("header.css");
+@import url("footer.css");
+@import url("components.css");
+
+/* Páginas específicas */
+@import url("index.css");
+@import url("blog.css");
+@import url("atendimento.css");
+@import url("sobre_mim.css");
+@import url("index_post.css");
+
+/* ===========================
+   FIM STYLES.CSS
+   =========================== */
+
+
+

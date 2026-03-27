@@ -1,0 +1,130 @@
+/* ===========================
+   ATENDIMENTO - Terapia Online
+   =========================== */
+
+/* Seção principal de atendimento */
+.atendimento {
+  padding-top: 4rem;         /* py-16 */
+  padding-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .atendimento {
+    padding-top: 6rem;       /* md:py-24 */
+    padding-bottom: 6rem;
+  }
+}
+
+/* Container principal */
+.atendimento__container {
+  max-width: 80rem;          /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 10;
+}
+@media (min-width: 640px) {
+  .atendimento__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .atendimento__container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Título principal */
+.atendimento__titulo {
+  font-size: 2.25rem;        /* text-4xl */
+  font-weight: 700;          /* font-bold */
+  text-align: center;
+  color: var(--brand);            /* text-gray-900 */
+  margin-bottom: 1rem;       /* mb-4 */
+}
+
+/* Subtítulo/descrição */
+.atendimento__descricao {
+  font-size: 1.25rem;        /* text-xl */
+  text-align: justify;
+  color: #4B5563;            /* text-gray-600 */
+  margin-bottom: 3rem;       /* mb-12 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.atendimento__container-individual {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3rem;       /* mb-12 */
+  gap: 3rem;                 /* gap between items */
+}
+
+@media (max-width: 767px) {
+  .atendimento__container-individual {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .atendimento__container-individual .atendimento__figura {
+    order: 1;
+  }
+
+  .atendimento__container-individual .atendimento__item {
+    order: 2;
+  }
+}
+
+.atendimento__item {
+  width: 100%;
+}
+
+/* Imagem do hero */
+.atendimento__imagem {
+  width: 100%;
+  max-width: 28rem;         /* max-w-md */
+  border-radius: 0.75rem;   /* rounded-xl */
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .atendimento__imagem {
+    max-width: 36rem;       /* lg:max-w-xl */
+  }
+}
+
+
+
+/* Botão principal do hero (CTA) */
+.botao__atendimento {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 2rem;       /* px-8 py-4 */
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 1.25rem;       /* text-xl */
+  font-weight: 600;         /* font-semibold */
+  border-radius: 0.75rem;   /* rounded-xl */
+  box-shadow: 0 20px 25px -5px rgba(37,99,235,0.4), 0 8px 10px -6px rgba(37,99,235,0.4);
+  transition: background-color 300ms ease, transform 300ms ease;
+  text-decoration: none;
+  animation: pulse-animation 2s ease-in-out infinite;
+}
+.botao__atendimento:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   FIM ATENDIMENTO
+   =========================== */

@@ -3,90 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Artigos — Psicóloga Mariana Faria</title>
-  <meta name="description" content="Lista de artigos e insights sobre ansiedade, estresse e bem-estar." />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <title>Todos os Artigos | Psicologia, Ansiedade e Bem-Estar</title>
+    <meta name="description" content="Confira todos os artigos de Mariana Faria sobre ansiedade, estresse, bem-estar emocional e saúde mental em um só lugar." />
+    <link rel="canonical" href="https://www.psicologamarianafaria.com/posts/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Todos os Artigos | Psicologia, Ansiedade e Bem-Estar">
+    <meta property="og:description" content="Confira todos os artigos de Mariana Faria sobre ansiedade, estresse, bem-estar emocional e saúde mental.">
+    <meta property="og:url" content="https://www.psicologamarianafaria.com/posts/">
+    <meta property="og:image" content="https://www.psicologamarianafaria.com/images/logo.png">
+    <meta property="og:image:alt" content="Logo do site da psicóloga Mariana Faria">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Todos os Artigos | Psicologia, Ansiedade e Bem-Estar">
+    <meta name="twitter:description" content="Confira todos os artigos de Mariana Faria sobre ansiedade, estresse, bem-estar emocional e saúde mental.">
+    <meta name="twitter:image" content="https://www.psicologamarianafaria.com/images/logo.png">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="shortcut icon" href="/images/logo.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="theme-color" content="#ffffff">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Todos os Artigos | Mariana Faria",
+            "url": "https://www.psicologamarianafaria.com/posts/",
+            "description": "Confira todos os artigos de Mariana Faria sobre ansiedade, estresse, bem-estar emocional e saúde mental."
+        }
+    </script>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <header class="bg-white shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-6">
-      <a href="/" class="text-xl font-bold text-blue-600">Psicóloga Mariana Faria</a>
-      <p class="text-sm text-gray-500">Artigos e insights</p>
+<body class="site-base">
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <div>
+                <a href="../index.html" class="site-brand">Mariana Faria <span class="site-brand-sub">| Psicóloga</span></a>
+            </div>
+            <div>
+                <nav class="cabecalho__container__nav">
+                    <a href="../index.html" class="nav__link">Início</a>
+                    <a href="../sobre_mim.html" class="nav__link">Sobre Mim</a>
+                    <a href="../atendimento.html" class="nav__link">Atendimento</a>
+                    <a href="../blog.html" class="nav__link active" aria-current="page">Blog</a>
+                </nav>
+            </div>
+            <button id="mobile-menu-button" class="cabecalho__container__botao" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+                <svg class="botao__svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="botao__mobile" aria-hidden="true">
+            <a href="../index.html" class="nav__link">Início</a>
+            <a href="../sobre_mim.html" class="nav__link">Sobre Mim</a>
+            <a href="../atendimento.html" class="nav__link">Atendimento</a>
+            <a href="../blog.html" class="nav__link active" aria-current="page">Blog</a>
+        </nav>
+    </header>
+
+    <main class="posts-lista-secao">
+        <div class="hero__textura"></div>
+        <div class="posts-lista">
+            <h1 class="posts-lista__titulo">Todos os Artigos</h1>
+            <p class="posts-lista__descricao">Encontre aqui conteúdos sobre ansiedade, estresse e práticas para bem-estar emocional.</p>
+
+            <section class="posts-lista__secao" aria-labelledby="posts-internos-titulo">
+                <h2 id="posts-internos-titulo" class="posts-lista__secao-titulo">Artigos no site</h2>
+                <div id="posts-grid-internal" class="posts-lista__grade">
+                    <!-- Grid será preenchido dinamicamente -->
+                </div>
+            </section>
+
+            <section class="posts-lista__secao" aria-labelledby="posts-externos-titulo">
+                <h2 id="posts-externos-titulo" class="posts-lista__secao-titulo">Links externos</h2>
+                <p class="posts-lista__secao-descricao">Conteúdos publicados em outros sites.</p>
+                <div id="posts-grid-external" class="posts-lista__grade">
+                    <!-- Grid será preenchido dinamicamente -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-rodape">
+        <div class="site-rodape__container">
+            <div class="site-rodape__grade">
+                <div>
+                    <h4 class="site-rodape__titulo">Psicóloga Mariana Faria</h4>
+                    <p class="site-rodape__texto">CRP-05-58738</p>
+                    <p class="site-rodape__texto">Atendimento Online.</p>
+                </div>
+                <div>
+                    <h4 class="site-rodape__titulo">Navegação</h4>
+                    <ul class="site-rodape__lista">
+                        <li><a href="../index.html" class="site-rodape__link">Início</a></li>
+                        <li><a href="../sobre_mim.html" class="site-rodape__link">Sobre Mim</a></li>
+                        <li><a href="../atendimento.html" class="site-rodape__link">Atendimento</a></li>
+                        <li><a href="../blog.html" class="site-rodape__link">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="site-rodape__titulo">Fale Conosco</h4>
+                    <ul class="site-rodape__lista">
+                        <li><a href="tel:+5511992179781" class="site-rodape__link">(11) 99217-9781</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="site-rodape__titulo">Mídias Sociais</h4>
+                    <div class="site-rodape__midias">
+                        <a href="https://www.instagram.com/marianafaria.psi/" aria-label="Instagram" class="site-rodape__midia-botao site-rodape__midia-botao--instagram" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/icons8-instagram-48.png" alt="Instagram" class="site-rodape__midia-icone--instagram" aria-hidden="true">
+                        </a>
+                        <a href="https://wa.me/5511992179781?text=Ol%C3%A1%20Mariana,%20achei%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="WhatsApp" class="site-rodape__midia-botao site-rodape__midia-botao--whatsapp" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/icons8-whatsapp.svg" alt="WhatsApp" class="site-rodape__midia-icone--whatsapp" aria-hidden="true">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="site-rodape__creditos">
+        Ícone WhatsApp por <a href="https://icons8.com/icon/16713/whatsapp" target="_blank" rel="noopener noreferrer">Whatsapp</a> e ícone Instagram por <a href="https://icons8.com/icon/Xy10Jcu1L2Su/instagram" target="_blank" rel="noopener noreferrer">Instagram</a>, via <a href="https://icons8.com" target="_blank" rel="noopener noreferrer">Icons8</a>.
     </div>
-  </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-extrabold mb-6">Todos os Artigos</h1>
-    <p class="text-gray-600 mb-8">Encontre aqui conteúdos sobre ansiedade, estresse e práticas para bem-estar emocional.</p>
+    <!-- Scripts -->
+    <script type="module">
+        import '../scripts/common.js';
+        import { loadBlogPosts } from '../scripts/blog-posts.js';
 
-    <div id="posts-grid" class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Grid será preenchido dinamicamente a partir de /posts/blog-posts.json -->
-    </div>
-
-    <div class="mt-12">
-      <a href="/" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg">Voltar ao Início</a>
-    </div>
-  </main>
-
-  <script>
-    // Carrega os mesmos posts compartilhados pelo site
-    async function loadPostsGrid(jsonPath = '/posts/blog-posts.json') {
-      const grid = document.getElementById('posts-grid');
-      try {
-        const res = await fetch(jsonPath, { cache: 'no-cache' });
-        if (!res.ok) throw new Error('Falha ao carregar posts');
-        const posts = await res.json();
-
-        posts.forEach(post => {
-          const article = document.createElement('article');
-          article.className = 'bg-white rounded-xl shadow-sm overflow-hidden';
-
-          const a = document.createElement('a');
-          a.href = post.link || '#';
-          if (post.link && post.link.startsWith('http')) {
-            a.target = '_blank';
-            a.rel = 'noopener noreferrer';
-          }
-          a.className = 'block';
-
-          const img = document.createElement('img');
-          img.src = post.image;
-          img.alt = post.title;
-          img.className = 'w-full h-48 object-cover';
-
-          const div = document.createElement('div');
-          div.className = 'p-4';
-
-          const h2 = document.createElement('h2');
-          h2.className = 'font-semibold text-lg';
-          h2.textContent = post.title;
-
-          const p = document.createElement('p');
-          p.className = 'text-sm text-gray-600 mt-2';
-          p.textContent = post.excerpt;
-
-          div.appendChild(h2);
-          div.appendChild(p);
-          a.appendChild(img);
-          a.appendChild(div);
-          article.appendChild(a);
-          grid.appendChild(article);
+        loadBlogPosts('posts-grid-internal', {
+            limit: null,
+            cardClass: 'posts-lista__artigo',
+            showDate: false,
+            filterVisible: true,
+            linkType: 'internal'
         });
-      } catch (err) {
-        console.error('Erro ao carregar posts:', err);
-        grid.innerHTML = '<p class="text-gray-500">Não foi possível carregar os artigos.</p>';
-      }
-    }
 
-    loadPostsGrid();
-  </script>
+        loadBlogPosts('posts-grid-external', {
+            limit: null,
+            cardClass: 'posts-lista__artigo',
+            showDate: false,
+            filterVisible: true,
+            linkType: 'external'
+        });
+    </script>
 
-  <footer class="bg-white border-t mt-12">
-    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-500">© Mariana Faria</div>
-  </footer>
-  <div class="max-w-6xl mx-auto px-4 text-xs text-gray-500 mt-4 mb-8">
-    Ícone Whatsapp por <a href="https://icons8.com/icon/16713/whatsapp" target="_blank" rel="noopener noreferrer" class="underline">Whatsapp</a> e ícone Instagram por <a href="https://icons8.com/icon/Xy10Jcu1L2Su/instagram" target="_blank" rel="noopener noreferrer" class="underline">Instagram</a>, via <a href="https://icons8.com" target="_blank" rel="noopener noreferrer" class="underline">Icons8</a>.
-  </div>
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top" aria-hidden="true" aria-label="Voltar ao topo" title="Voltar para o topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M12 19V6"></path>
+            <path d="M5 12l7-7 7 7"></path>
+        </svg>
+    </button>
 </body>
 </html>

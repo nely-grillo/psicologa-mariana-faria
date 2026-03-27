@@ -1,0 +1,21 @@
+{
+  "name": "psicologa-mariana-faria",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional estatico da Psicologa Mariana Faria",
+  "scripts": {
+    "lint": "npm run lint:js && npm run lint:css && npm run format:check",
+    "lint:js": "eslint \"scripts/**/*.js\"",
+    "lint:css": "stylelint \"styles/**/*.css\"",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.16.0",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}

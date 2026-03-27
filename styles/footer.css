@@ -1,0 +1,137 @@
+/* ===========================
+   FOOTER / RODAPÉ
+   =========================== */
+
+/* Footer principal */
+.site-rodape {
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-300);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  margin-top: auto;
+}
+
+/* Container do footer */
+.site-rodape__container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .site-rodape__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .site-rodape__container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Grid de conteúdo do footer */
+.site-rodape__grade {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .site-rodape__grade {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Seção individual do footer */
+/* .site-rodape__secao { */
+  /* Espaçamento já definido pelo grid */
+/* } */
+
+/* Título da seção */
+.site-rodape__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+/* Texto/parágrafo */
+.site-rodape__texto {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-gray-400);
+}
+
+/* Lista de links */
+.site-rodape__lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Link individual */
+.site-rodape__link {
+  color: var(--color-gray-400);
+  font-size: 0.875rem;
+  transition: color 200ms ease;
+  text-decoration: none;
+}
+.site-rodape__link:hover {
+  color: var(--brand-light);
+}
+
+/* Container de mídias sociais */
+.site-rodape__midias {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Botão de mídia social */
+.site-rodape__midia-botao {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 200ms ease, transform 200ms ease;
+  text-decoration: none;
+}
+
+.site-rodape__midia-botao--instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.site-rodape__midia-botao--whatsapp {
+  background-color: #25D366;
+}
+
+.site-rodape__midia-botao:hover {
+  transform: scale(1.1);
+}
+
+/* Ícones de mídia social */
+.site-rodape__midia-icone--instagram,
+.site-rodape__midia-icone--whatsapp {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+/* Créditos / Copyright */
+.site-rodape__creditos {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-gray-800);
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+}
+
+/* ===========================
+   FIM FOOTER
+   =========================== */
