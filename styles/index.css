@@ -67,54 +67,47 @@
   }
 }
 
-/* Card de citação de Jung */
-.hero__citacao {
-  background-color: #ffffff;
-  padding: 1.5rem;          /* p-6 */
-  border-radius: 0.75rem;   /* rounded-xl */
-  box-shadow: 0 8px 30px rgba(2,6,23,0.06);
-  border-left: 4px solid var(--brand, #0f58b3);
-  margin-bottom: 2rem;      /* mb-8 */
-}
-@media (min-width: 768px) {
-  .hero__citacao {
-    padding: 2rem;          /* md:p-8 */
-  }
-}
+/* Apresentação da Mariana (coluna esquerda) */
 @media (min-width: 1024px) {
-  .hero__citacao {
+  .hero__apresentacao {
     grid-column: 1;
-    margin-bottom: 0;
+    align-self: end;
+  }
+
+  .hero__cta-bloco {
+    align-self: start;
   }
 }
 
-/* Título da citação (frase de Jung) */
-.hero__citacao-titulo {
-  font-size: 1.5rem;        /* text-2xl */
-  font-weight: 800;         /* font-extrabold */
-  line-height: 1.25;        /* leading-tight */
-  color: #111827;           /* text-gray-900 */
+/* Título: quem ela é e o que faz */
+.hero__titulo {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+/* Frase acolhedora (destaque principal) */
+.hero__frase {
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 1.25rem;
 }
 @media (min-width: 768px) {
-  .hero__citacao-titulo {
-    font-size: 1.875rem;    /* md:text-3xl */
+  .hero__frase {
+    font-size: 2.5rem;
   }
 }
 
-/* Autor da citação */
-.hero__citacao-autor {
-  font-size: 1.125rem;      /* text-lg */
-  color: #4B5563;           /* text-gray-600 */
-  margin-top: 1rem;         /* mt-4 */
-  font-weight: 500;         /* font-medium */
-}
-
-/* Segunda frase*/
-.hero__segunda-frase {
-  font-size: 1rem;        /* text-2xl */
-  font-weight: 600;         /* font-semibold */
-  margin-bottom: 2rem; 
-  color: #111827;           /* text-gray-900 */
+/* Texto de apresentação */
+.hero__texto {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.7;
 }
 
 /* Bloco de CTA (frase + botão) */
@@ -123,8 +116,11 @@
 }
 
 /* Botão principal do hero (CTA) */
-.hero__botao {
-  display: inline-block;
+.hero__botao,
+.contato__botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
   padding: 1rem 2rem;       /* px-8 py-4 */
   background-color: #2563eb;
   color: #ffffff;
@@ -141,14 +137,21 @@
   transform: scale(1.05);
 }
 
+/* Ícone do WhatsApp dentro dos botões */
+.hero__botao-icone {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
 /* Animação de pulso para o botão */
 @keyframes pulse-animation {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.02); }
 }
 
-/* Container da imagem do hero */
+/* Container da imagem do hero (no celular, depois do botão) */
 .hero__imagem-container {
+  order: 1;
   width: 100%;
   display: flex;
   align-items: center;
@@ -174,6 +177,39 @@
   .hero__imagem {
     max-width: 36rem;       /* lg:max-w-xl */
   }
+}
+
+/* ===========================
+   CITAÇÃO DE JUNG
+   =========================== */
+
+.citacao {
+  padding: 1rem 1rem 0;
+}
+
+.citacao__card {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.citacao__texto {
+  font-size: 1.375rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #374151;
+}
+@media (min-width: 768px) {
+  .citacao__texto {
+    font-size: 1.625rem;
+  }
+}
+
+.citacao__autor {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b7280;
 }
 
 /* ===========================
@@ -252,6 +288,22 @@
   font-weight: 600;         /* font-semibold */
   opacity: 0.9;
   line-height: 1.75;
+}
+
+/* Botão no fim da mensagem (fundo azul: botão branco) */
+.contato__botao {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  color: #1d4ed8;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: transform 300ms ease;
+}
+.contato__botao:hover {
+  transform: scale(1.05);
 }
 
 /* ===========================

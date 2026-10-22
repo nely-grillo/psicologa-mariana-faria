@@ -125,6 +125,48 @@
   transform: scale(1.05);
 }
 
+/* Bloco "Como funciona" (dentro de cada atendimento) */
+.atendimento__descricao:has(+ .como-funciona) {
+  margin-bottom: 1.5rem;
+}
+
+.como-funciona {
+  background-color: #eff6ff;
+  border-left: 4px solid var(--brand);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.como-funciona__titulo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.como-funciona__lista {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 1.0625rem;
+  color: #374151;
+}
+
+/* Recuo para a linha quebrada alinhar com o texto, não com o ✓ */
+.como-funciona__lista li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.como-funciona__lista li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--brand);
+  font-weight: 700;
+}
+
 /* ===========================
    FIM ATENDIMENTO
    =========================== */
