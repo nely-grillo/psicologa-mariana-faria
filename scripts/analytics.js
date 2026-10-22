@@ -1,11 +1,14 @@
 /**
- * Google Ads: tag do Google, consentimento de cookies (Consent Mode)
- * e conversão por clique nos links do WhatsApp
+ * Google Ads e Google Analytics: tag do Google, consentimento de cookies
+ * (Consent Mode) e conversão por clique nos links do WhatsApp
  */
 
 // Preencher com os dados de Google Ads > Metas > Conversões
 const GOOGLE_ADS_ID = 'AW-10971727252';
 const CONVERSION_LABEL = '9zrmCIPQl6UdEJSL3e8o';
+
+// Propriedade 508758930 do Google Analytics (Psicóloga Mariana Faria)
+const GOOGLE_ANALYTICS_ID = 'G-85DBJJS27Z';
 
 const CONSENT_KEY = 'cookie-consent';
 const ORIGEM_GOOGLE_KEY = 'origem-google-ads';
@@ -39,7 +42,8 @@ function saveConsent(value) {
 function updateConsent(value) {
     gtag('consent', 'update', {
         ad_storage: value,
-        ad_user_data: value
+        ad_user_data: value,
+        analytics_storage: value
     });
 }
 
@@ -63,8 +67,10 @@ export function initGoogleTag() {
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
     document.head.appendChild(script);
 
+    // Um único gtag.js atende as duas contas
     gtag('js', new Date());
     gtag('config', GOOGLE_ADS_ID);
+    gtag('config', GOOGLE_ANALYTICS_ID);
 }
 
 // Banner de cookies
@@ -77,8 +83,9 @@ function showCookieBanner() {
     banner.setAttribute('aria-label', 'Aviso de cookies');
     banner.innerHTML = `
         <p class="cookie-banner__texto">
-            Usamos cookies do Google apenas para medir se os nossos anúncios trazem contatos
-            pelo WhatsApp. Nenhum dado é usado para personalizar anúncios.
+            Usamos cookies do Google para contar as visitas ao site e medir se os nossos
+            anúncios trazem contatos pelo WhatsApp. Nenhum dado é usado para personalizar
+            anúncios.
         </p>
         <div class="cookie-banner__acoes">
             <button type="button" class="cookie-banner__botao" data-consent="denied">Recusar</button>
