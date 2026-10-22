@@ -13,8 +13,9 @@ const GOOGLE_ANALYTICS_ID = 'G-85DBJJS27Z';
 const CONSENT_KEY = 'cookie-consent';
 const ORIGEM_GOOGLE_KEY = 'origem-google-ads';
 
-// Enquanto o ID for o placeholder, a tag não é carregada e nenhum evento é enviado
-const isTagConfigured = !GOOGLE_ADS_ID.includes('X');
+// A tag só roda no site publicado: com ID real e fora da prévia local
+const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+const isTagConfigured = !GOOGLE_ADS_ID.includes('X') && !isLocalPreview;
 
 window.dataLayer = window.dataLayer || [];
 function gtag() {
