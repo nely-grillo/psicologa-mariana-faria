@@ -2,6 +2,13 @@
  * Scripts compartilhados entre todas as páginas
  */
 
+import {
+    initGoogleTag,
+    initCookieBanner,
+    initWhatsAppConversion,
+    initOrigemGoogle
+} from './analytics.js';
+
 // Toggle do menu mobile
 export function initMobileMenu() {
     const btn = document.getElementById('mobile-menu-button');
@@ -93,6 +100,10 @@ export function formatDateISO(iso) {
 
 // Inicializar automaticamente quando importado
 document.addEventListener('DOMContentLoaded', () => {
+    initGoogleTag();
+    initCookieBanner();
+    initWhatsAppConversion();
+    initOrigemGoogle();
     initMobileMenu();
     initSmoothScroll();
     initBackToTop();
