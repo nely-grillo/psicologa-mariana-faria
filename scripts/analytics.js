@@ -63,15 +63,25 @@ export function initGoogleTag() {
 
     if (!isTagConfigured) return;
 
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
-    document.head.appendChild(script);
-
     // Um único gtag.js atende as duas contas
     gtag('js', new Date());
     gtag('config', GOOGLE_ADS_ID);
     gtag('config', GOOGLE_ANALYTICS_ID);
+
+    // O script só baixa depois que a página carregou, para não atrasar a
+    // primeira exibição no celular; os eventos ficam na fila do dataLayer
+    const loadScript = () => {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
+        document.head.appendChild(script);
+    };
+
+    if (document.readyState === 'complete') {
+        loadScript();
+    } else {
+        window.addEventListener('load', loadScript, { once: true });
+    }
 }
 
 // Banner de cookies

@@ -30,7 +30,6 @@ Este projeto foi desenvolvido como site estático responsivo, com conteúdo dist
 │   ├── common.js
 │   └── blog-posts.js
 ├── styles/
-│   ├── styles.css
 │   ├── global.css
 │   ├── header.css
 │   ├── footer.css

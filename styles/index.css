@@ -23,7 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/images/logo.png');
+  background-image: url('/images/textura.webp');
   background-repeat: repeat;
   background-position: center;
   background-size: 300px;
@@ -277,7 +277,6 @@
 /* Parágrafo padrão */
 .contato__paragrafo {
   font-size: 1.125rem;      /* text-lg */
-  opacity: 0.9;
   margin-bottom: 1rem;      /* mb-4 */
   line-height: 1.75;
 }
@@ -286,7 +285,6 @@
 .contato__paragrafo--fechamento {
   font-size: 1.25rem;       /* text-xl */
   font-weight: 600;         /* font-semibold */
-  opacity: 0.9;
   line-height: 1.75;
 }
 

@@ -22,8 +22,21 @@
     <link rel="apple-touch-icon" href="/images/logo.png">
     <meta name="theme-color" content="#ffffff">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <!-- Fonte sem bloquear a renderização -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"></noscript>
+    <!-- Folhas de estilo baixadas em paralelo -->
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/blog.css">
+    <link rel="stylesheet" href="/styles/atendimento.css">
+    <link rel="stylesheet" href="/styles/sobre_mim.css">
+    <link rel="stylesheet" href="/styles/index_post.css">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",

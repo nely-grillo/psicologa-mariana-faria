@@ -105,7 +105,9 @@
 
 /* Botão principal do hero (CTA) */
 .botao__atendimento {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
@@ -165,6 +167,118 @@
   left: 0;
   color: var(--brand);
   font-weight: 700;
+}
+
+.botao__atendimento-icone {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Topo: no celular o texto e o botão vêm antes da foto */
+@media (max-width: 767px) {
+  .atendimento__topo .atendimento__item {
+    order: 1;
+  }
+
+  .atendimento__topo .atendimento__figura {
+    order: 2;
+  }
+}
+
+.atendimento__chamada {
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--color-gray-600);
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+}
+
+.atendimento__nota {
+  font-size: 0.9375rem;
+  text-align: center;
+  color: var(--color-gray-600);
+  margin-top: 1.25rem;
+}
+
+/* Blocos de texto abaixo do topo */
+.atendimento__bloco {
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+}
+
+.atendimento__subtitulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.atendimento__bloco .atendimento__descricao {
+  font-size: 1.125rem;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.atendimento__link {
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* "Como funciona" e "Para quem é" lado a lado no computador */
+.atendimento__colunas {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 48rem;
+  margin: 0 auto 3rem;
+}
+
+@media (min-width: 768px) {
+  .atendimento__colunas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.atendimento__colunas .como-funciona {
+  margin-bottom: 0;
+}
+
+/* Perguntas frequentes */
+.duvidas {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.duvidas__item {
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.75rem;
+  background-color: var(--color-white);
+}
+
+.duvidas__pergunta {
+  padding: 1rem 1.25rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  cursor: pointer;
+}
+
+.duvidas__resposta {
+  padding: 0 1.25rem 1rem;
+  color: var(--color-gray-600);
+}
+
+/* Chamada final */
+.atendimento__final {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.atendimento__final-texto {
+  font-size: 1.25rem;
+  color: var(--color-gray-700);
+  margin-bottom: 2rem;
 }
 
 /* ===========================
