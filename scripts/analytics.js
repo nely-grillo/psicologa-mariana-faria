@@ -68,20 +68,20 @@ export function initGoogleTag() {
     gtag('config', GOOGLE_ADS_ID);
     gtag('config', GOOGLE_ANALYTICS_ID);
 
-    // O script só baixa depois que a página carregou, para não atrasar a
-    // primeira exibição no celular; os eventos ficam na fila do dataLayer
+    // O script só baixa na primeira interação do visitante (rolar, tocar,
+    // clicar, teclar), para não travar o celular enquanto a página aparece.
+    // Os eventos ficam na fila do dataLayer; o clique no WhatsApp abre outra
+    // aba, então a conversão é enviada assim que o script chega
+    const events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
     const loadScript = () => {
+        events.forEach(type => window.removeEventListener(type, loadScript));
         const script = document.createElement('script');
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`;
         document.head.appendChild(script);
     };
 
-    if (document.readyState === 'complete') {
-        loadScript();
-    } else {
-        window.addEventListener('load', loadScript, { once: true });
-    }
+    events.forEach(type => window.addEventListener(type, loadScript, { once: true, passive: true }));
 }
 
 // Banner de cookies
